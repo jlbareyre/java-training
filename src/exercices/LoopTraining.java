@@ -5,7 +5,11 @@ public class LoopTraining {
      * @return the sum of the values, eg: 6
      */
     public static int sum(int[] values) {
-        return 0;
+        int ret = 0;
+        for (int i : values) {
+            ret += i;
+        }
+        return ret;
     }
 
     /**
@@ -13,7 +17,11 @@ public class LoopTraining {
      * @return the concatenation of all values values, eg: "abc"
      */
     public static String concat(String[] values) {
-        return "";
+        String ret = "";
+        for (String string : values) {
+            ret += string;
+        }
+        return ret;
     }
 
     /**
@@ -21,7 +29,11 @@ public class LoopTraining {
      * @return if the array contains an even value, eg: false
      */
     public static boolean hasEven(int[] values) {
-        return false;
+        boolean ret = false ;
+        for (int i : values) {
+            if ( i % 2 == 0 ) { ret = true; }
+        }
+        return ret;
     }
 
     /**
@@ -30,7 +42,11 @@ public class LoopTraining {
      * @return the index of the searched value or -1 if the value isn't present, eg: 1
      */
     public static int indexOf(int[] values, int search) {
-        return 0;
+        int idx = -1;
+        for (int i = 0; i < values.length; i++ ) {
+            if (values[i] == search) { idx = i; break; }
+        }
+        return idx;
     }
 
     /**
@@ -39,7 +55,11 @@ public class LoopTraining {
      * @return how many times the searched value occurred, eg: 2
      */
     public static int count(int[] values, int search) {
-        return 0;
+        int occ = 0;
+        for (int i : values) {
+            if (i == search) { occ += 1 ; }
+        }
+        return occ;
     }
 
     /**
@@ -48,6 +68,10 @@ public class LoopTraining {
      * @return add the increment to each value of the array, eg: {3, 4, 5}
      */
     public static int[] incrementEach(int[] values, int increment) {
-        return null;
+        int[] tabInc = values.clone();
+        for (int i = 0 ; i< values.length; i++) {
+            tabInc[i] += increment;
+        }
+        return tabInc;
     }
 }
